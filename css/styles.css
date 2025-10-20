@@ -1,12 +1,12 @@
         /* General Styles that apply to all */
-
-
+.body {
+   background-color: burlywood;
+}
 
         /* ---------------------------------
            1. Morning Theme (5:00 - 11:59)
            --------------------------------- */
         /* General Morning Styles */
-
 
 
         /* Custom Morning Animation: Rises slightly and fades in */
