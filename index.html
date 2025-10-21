@@ -4,44 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Time Greeting</title>
-    <link rel= "style sheet" href="css/styles.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Load Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 </head>
-<body>
+<body class="text-center morning-bg">
    <script src="greetings.js"></script>
+
+   <div class="container py-5">
         <!-- MORNING: 5:00 AM to 11:59 AM (Hours 5-11) -->
         <!-- Start hidden using Bootstrap's d-none class -->
-            <div class="Morning">
-               <div class="col">
-               <div class="clearfix">
-  <img src="..." class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
-
-  <p><h1>Good Morning!</h1>
-    A paragraph of placeholder text. We’re using it here to show the use of the clearfix class. We’re adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
-  </p>
-</div>
-            </div>
-            </div>
-         </div>
-
+         <div id="morning" class="greeting d-none p-5 rounded shadow">
+          <div class="sunrise"></div>
+          <h1 class="display-4">Good Morning!</h1>
+          <p class="lead mb-4">Start your day with a smile 😁👍</p>
+          <button class="btn btn-warning">Have a Great Day</button>
+        </div>
         <!-- AFTERNOON: 12:00 PM to 5:59 PM (Hours 12-17) -->
         <!-- Start hidden using Bootstrap's d-none class -->
-
-            <div class="Afternoon">
-<h1>Good Afternoon!</h1>
-            </div>
-         </div>
-
-
+<div id="afternoon" class="greeting d-none p-5 rounded shadow">
+  <div class="sun"></div>
+  <h1 class="display-4">Good Afternoon!</h1>
+  <p class="lead mb-4">Keep it up! 💪</p>
+  <button class="btn btn-primary">Have an Amazing Day</button>
+</div>
         <!-- NIGHT: 6:00 PM to 4:59 AM (Hours 18-4) -->
         <!-- Start hidden using Bootstrap's d-none class -->
-            <div class="Night">
-<h1>Good Night!</h1>   
-            </div>
+         <div id="night" class="greeting  p-5 rounded shadow">
+          <div class="stars"></div>
+          <div class="moon"></div>
+          <h1 class="display-4">Good Night!</h1>
+          <p class="lead mb-4">Relax and unwind...🌙</p>
+          <button class="btn btn-light">Have a Good Night</button>
          </div>
-
-
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
