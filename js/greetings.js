@@ -3,6 +3,18 @@
          */
         function updateGreeting() {
 
+            const d = new Date();
+let hour = d.getHours();
+
+if(hour >=5 && hour < 12) {
+    console.log("morning")
+} else if(hour >=13 && hour < 18) {
+    console.log("afternoon")
+} else if(hour >=18 && < 4) {
+    console.log("night")
+}
+document.getElementById("demo").innerHTML = hour;
+
             // Get references to the three time-of-day element containers
 
             
