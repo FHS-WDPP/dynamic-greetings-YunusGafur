@@ -2,27 +2,27 @@
          * The core logic function that determines the time of day and updates the display.
          */
         function updateGreeting() {
+    const d = new Date();
+    
+    let hour = d.getHours();
 
-            const d = new Date();
-let hour = d.getHours();
-
-if(hour >=5 && hour < 12) {
-    console.log("morning")
-} else if(hour >=13 && hour < 18) {
-    console.log("afternoon")
-} else if(hour >=18 && < 4) {
-    console.log("night")
-}
-document.getElementById("demo").innerHTML = hour;
+    if (hour < 12) {
 
             // Get references to the three time-of-day element containers
-
+document.querySelector("#night").classList.add("d-none");
+document.querySelector("#afternoon").classList.add("d-none");
+    } else if (hour >= 12) {
             
-            // Get a reference to the body tag for background color changes
+document.getElementsByTagName("morning").classList.add("d-none");
+document.getElementsByTagName("night").classList.add("d-none");
+    }
+else {
+document.querySelector("#morning").classList.add("d-none");
+document.querySelector("#afternoon").classList.add("d-none");
+}
+        }
 
-
-            // 1. Hide all elements first (ensures only one is shown)
-
+            // 1. Hide all elements first (ensures only one is shown
 
             // 2. Conditional Logic: Determine the time frame using if/else statements
 
@@ -41,10 +41,11 @@ document.getElementById("demo").innerHTML = hour;
 
             // Optional: Log the current time for debugging
 
-        }
+        
 
         // Run the function once when the script loads
 
         // Optional: Run the function every 30 seconds (or more frequently) to update automatically
         // Note: Students should understand this is for real-time changes
         // setInterval(updateGreeting, 30000); 
+document.onload = updateGreeting()
