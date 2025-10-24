@@ -2,16 +2,31 @@
          * The core logic function that determines the time of day and updates the display.
          */
         function updateGreeting() {
+    const d = new Date();
+    let hour = d.getHours();
+    
+    const morning = document.querySelector("#morning");
+    const afternoon = document.querySelector("#afternoon");
+    const night = document.querySelector("#night");
 
-            // Get references to the three time-of-day element containers
+morning.classList.add("d-none");
+afternoon.classList.add("d-none");
+night.classList.add("d-none");
 
-            
-            // Get a reference to the body tag for background color changes
+if (hour >=5 && hour < 12) {
+    morning.classList.remove("d-none");
+}
 
+else if (hour >= 12 && hour < 18) {
+    afternoon.classList.remove("d-none");
+}
 
-            // 1. Hide all elements first (ensures only one is shown)
-
-
+else {
+    night.classList.remove("d-none")
+    }
+}
+        
+window.onload = updateGreeting;
             // 2. Conditional Logic: Determine the time frame using if/else statements
 
             // Morning: 5 AM (inclusive) to 12 PM (exclusive) -> Hours 5 to 11
@@ -29,7 +44,7 @@
 
             // Optional: Log the current time for debugging
 
-        }
+        
 
         // Run the function once when the script loads
 
