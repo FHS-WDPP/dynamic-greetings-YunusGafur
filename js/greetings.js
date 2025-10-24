@@ -13,7 +13,7 @@ morning.classList.add("d-none");
 afternoon.classList.add("d-none");
 night.classList.add("d-none");
 
-if (hour >=5 && hour <12) {
+if (hour >=5 && hour < 12) {
     morning.classList.remove("d-none");
 }
 
