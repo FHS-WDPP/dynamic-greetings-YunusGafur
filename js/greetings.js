@@ -3,27 +3,30 @@
          */
         function updateGreeting() {
     const d = new Date();
-    
     let hour = d.getHours();
+    
+    const morning = document.querySelector("#morning");
+    const afternoon = document.querySelector("#afternoon");
+    const night = document.querySelector("#night");
 
-    if (hour < 12) {
+morning.classList.add("d-none");
+afternoon.classList.add("d-none");
+night.classList.add("d-none");
 
-            // Get references to the three time-of-day element containers
-document.querySelector("#night").classList.add("d-none");
-document.querySelector("#afternoon").classList.add("d-none");
-    } else if (hour >= 12) {
-            
-document.getElementsByTagName("morning").classList.add("d-none");
-document.getElementsByTagName("night").classList.add("d-none");
-    }
-else {
-document.querySelector("#morning").classList.add("d-none");
-document.querySelector("#afternoon").classList.add("d-none");
+if (hour >=5 && hour <12) {
+    morning.classList.remove("d-none");
 }
-        }
 
-            // 1. Hide all elements first (ensures only one is shown
+else if (hour >= 12 && hour < 18) {
+    afternoon.classList.remove("d-none");
+}
 
+else {
+    night.classList.remove("d-none")
+    }
+}
+        
+window.onload = updateGreeting;
             // 2. Conditional Logic: Determine the time frame using if/else statements
 
             // Morning: 5 AM (inclusive) to 12 PM (exclusive) -> Hours 5 to 11
@@ -48,4 +51,3 @@ document.querySelector("#afternoon").classList.add("d-none");
         // Optional: Run the function every 30 seconds (or more frequently) to update automatically
         // Note: Students should understand this is for real-time changes
         // setInterval(updateGreeting, 30000); 
-document.onload = updateGreeting()
